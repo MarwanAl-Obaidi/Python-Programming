@@ -1,6 +1,14 @@
 # Python-Programming
 A course I did that takes a look into the fundamentals of Python 3 programming, covering the basic components and structures of the Python language.
 
+## Contents:
+
+- Introduction
+- Fundementals of the Python language
+- Conditional structure if-elif-else
+- Iteration and Iterative structures
+- External files in Python
+
 ## ex_1_1
 Make a program which prints the following text:
 
