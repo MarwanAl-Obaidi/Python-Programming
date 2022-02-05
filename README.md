@@ -66,3 +66,40 @@ The first 4 characters were: dess
 The last 4 characters were: erts
 The string backwards was: stressed
 ```
+
+## ex_3_1
+The exercises of the third chapter, as well as the third chapter itself, focus on the conditional if-structure. In the first exercise the objective is to create a simple if-structure. The program should first ask a number from the user and save it to a variable. Then if the number is even (possible to divide by 2), the program should print the text "The given number was even.". The best way to do this is to use the operator remainder. The program should print the following:
+
+```
+Give a number: 24
+The given number was even.
+```
+
+or alternatively
+
+```
+Give a number: 11
+```
+
+Meaning that the program should not print anything if the number is odd.
+
+## ex_3_3
+The third exercise is to create a conditional structure which prints a line depending on the given selection. The program asks a number between 1 and 3, and based on the number prints the following: 1 prints "You selected one.", 2 prints "You selected two." and 3 prints "You selected three.", like this:
+
+```
+Select a number (1-3): 1
+You selected one.
+```
+
+## ex_4_1
+The first exercise in the fourth chapter is a basic while-iteration. The assignment is simple: create a program which on each turn prints the round number. Start by the round number 0 and make the iteration continue for four loops. When the program works correctly, it prints out something like this:
+
+```
+This is lap 0
+This is lap 1
+This is lap 2
+This is lap 3
+This is lap 4
+```
+
+The best way to approach this is probably by making two variables. The first one has the current lap number, and the other one marks the point where the iteration is stopped.
