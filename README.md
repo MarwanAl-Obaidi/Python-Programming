@@ -83,6 +83,44 @@ Give a number: 11
 
 Meaning that the program should not print anything if the number is odd.
 
+## ex_3_2
+The second exercise takes another step towards more realistic programming structures. In this exercise the idea is to create an if-structure, which has another if-structure inside it. Basically the idea is to implement the following structure:
+
+```
+if [selection]:
+	[code]
+	
+	if [selection]:
+		[code]
+	else:
+		[code}
+else:
+	[code]
+```
+
+The idea is to create a program which asks for a user name and password. If the given name is wrong, the program prints "The given name is wrong". If the name is acceptable, the program asks for the password. If the password is correct, the system prints "Both inputs are correct!", otherwise "The password is incorrect.". The correct inputs should be "John" and the password "ABC123". Overall, the program should print the following:
+
+```
+Give name: Peter
+The given name is wrong.
+```
+
+or alternatively
+
+```
+Give name: John
+Give password: Monkeys?
+The password is incorrect.
+```
+
+or alternatively
+
+```
+Give name: John
+Give password: ABC123
+Both inputs are correct!
+```
+
 ## ex_3_3
 The third exercise is to create a conditional structure which prints a line depending on the given selection. The program asks a number between 1 and 3, and based on the number prints the following: 1 prints "You selected one.", 2 prints "You selected two." and 3 prints "You selected three.", like this:
 
@@ -90,6 +128,64 @@ The third exercise is to create a conditional structure which prints a line depe
 Select a number (1-3): 1
 You selected one.
 ```
+
+## ex_3_4
+In the fourth exercise the idea is to define an if-structure which decides the action based on several inputs. The program asks for two numbers. If both of the numbers are even, the program prints "Both numbers are even." If only one of the numbers is even, the program prints "One of the numbers is even.". Finally, if neither of the numbers is even, the program prints "Both numbers are odd". When correct, the program works as following:
+
+```
+Give a number: 10
+Give another number: 11
+One of the numbers is even.
+```
+
+or alternatively
+
+```
+Give a number: 12
+Give another number: 20
+Both numbers are even.
+```
+
+or alternatively
+
+```
+Give a number: 15
+Give another number: 21
+Both numbers are odd.
+```
+
+## ex_3_5
+The last exercise of chapter 5 continues the exercise made in the previous chapter. In this exercise, expand the calculator so that the user can select what kind of calculation is done. If the user chooses 1, the calculator does addition as earlier. If 2, the calculator does substraction, if 3, it does multiplication, if 4, division.
+
+Also add the instructions for the user to know what to do as shown in the example below. Also, if the user selects anything else besides 1-4, the program prints "Selection was not correct.". When working correctly, the progam looks like the following: 
+
+```
+Calculator
+Give the first number: 100
+Give the second number: 25
+(1) +
+(2) -
+(3) *
+(4) /
+Please select something (1-4): 3
+The result is: 2500
+```
+
+If the user selects something else besides 1-4, it prints the following: 
+
+```
+Calculator
+Give the first number: 320
+Give the second number: 225
+(1) +
+(2) -
+(3) *
+(4) /
+Please select something (1-4): 100
+Selection was not correct.
+```
+
+Errors such as the user giving input which is not a number, or division by 0, can be ignored at this point.
 
 ## ex_4_1
 The first exercise in the fourth chapter is a basic while-iteration. The assignment is simple: create a program which on each turn prints the round number. Start by the round number 0 and make the iteration continue for four loops. When the program works correctly, it prints out something like this:
@@ -103,3 +199,62 @@ This is lap 4
 ```
 
 The best way to approach this is probably by making two variables. The first one has the current lap number, and the other one marks the point where the iteration is stopped.
+
+## ex_4_2
+The second exercise tries to elaborates on the first task. The idea is to create an iteration where the user is able to define when the loop ends by testing the input which the user gave.
+
+Create a program which, for every loop, prompts the user for input, and then prints it on the screen. If the user inputs the string "quit", the program prints "Bye bye!" and shuts down. When the program is working correctly it should print out something like this:
+
+```
+Write something: What?
+What?
+Write something: Fight the power.
+Fight the power.
+Write something: quit
+Bye bye!
+```
+
+It is probably a good idea to implement the entire program within one "while True" code block, and define the ending criteria so that the program uses a selection criteria and break command.
+
+## ex_5_1
+The first exercise in the fifth chapther is a straightforward file reading exercise. There is a file in the same directory with the exercise source code called "facts.txt", which has a long strip of text. Create a program which reads the entire content of the file and prints it on the screen with the text "Following was read from the file:". When working correctly, the program prints something like this:
+
+```
+Following was read from the file: Proin enim leo, tincidunt eget, sollicitudin a, aliquam sit amet, nisl. Proin dapibus tortor eu lectus. Curabitur in risus nec arcu pretium aliquam. In hac habitasse platea dictumst. Integer sit amet lacus sit amet pede blandit mattis. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Ut odio. Nullam nisl sem, adipiscing id, auctor eu, pulvinar et, nulla. Aenean convallis erat. Aliquam iaculis mauris sed sem.
+
+Fusce ultricies urna sed orci. Suspendisse accumsan ipsum egestas est. Pellentesque nisl. Quisque sodales ligula quis mi. In pede sapien, molestie vel, aliquet sit amet, malesuada a, magna. Nulla ipsum. 
+```
+
+## ex_6_1
+The first assignment in this chapter is easy: create a program with a main function and a separate subfunction called hello, which when called prints "Hello there!". The subfunction does not take any parameters or return any value, just prints the line. Then, to the main function, add a call to the subfunction and two print commands, the first one before the call which says "Lets call the subfunction:", and one after the subfunction call, a print command which prints "Quitting.". If implemented correctly, the program will print the following:
+
+```
+Lets call the subfunction:
+Hello there!
+Quitting.
+```
+
+Also remember to add this main function call to the main level:
+
+```
+if __name__ == "__main__":
+    main()
+```
+
+## ex_7_1
+The first exercise in this chapter consists of simple module library operations. In the chapter, a module called random was introduced. This module consists of several functions which can be used to get random numbers. The idea here is to create a program, which simulates coin flips by randomly selecting 0 (Tails) or 1 (Heads) and printing out the result. When working correctly, the program prints out something like this:
+
+```
+Heads!
+```
+
+Obviously, as the program applies random activities, it may give any combination of five heads or tails. For example, running the program a second time resulted in this:
+
+```
+5 coin flips:
+Tails!
+Heads!
+Heads!
+Tails!
+Heads!
+```
