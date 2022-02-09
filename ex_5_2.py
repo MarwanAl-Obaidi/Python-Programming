@@ -1,0 +1,5 @@
+sourcefile = input("Give a file name: ")
+filetext = input("Write something: ")
+readfile = open(sourcefile,"w")
+readfile.write(filetext)
+print("Wrote",filetext," to the file",sourcefile)

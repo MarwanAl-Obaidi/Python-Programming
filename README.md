@@ -216,6 +216,22 @@ Bye bye!
 
 It is probably a good idea to implement the entire program within one "while True" code block, and define the ending criteria so that the program uses a selection criteria and break command.
 
+## ex_4_3
+
+The third progam tests a for-iteration. In this program, build a calculator, which asks the user for a number, and calculates the sum of all positive numbers from 0 to the usergiven input. If the user gives the number 4, the program calculates the sum 0+1+2+3, if 7, the calculation is 0+1+2+3+4+5+6. Finally, the program produces an answer with the printout "The sum was:" and an answer.
+
+When working correctly, the program prints something like this:
+
+```
+Give a number: 3
+The sum was: 3
+
+Give a number: 5
+The sum was: 10
+```
+
+Keep in mind, that with the for in range-approach, there is always a variable which knows the current round number. Also, in this exercise it is allowed to assume that the user does not give faulty inputs such as letters or empty lines.
+
 ## ex_5_1
 The first exercise in the fifth chapther is a straightforward file reading exercise. There is a file in the same directory with the exercise source code called "facts.txt", which has a long strip of text. Create a program which reads the entire content of the file and prints it on the screen with the text "Following was read from the file:". When working correctly, the program prints something like this:
 
@@ -223,6 +239,16 @@ The first exercise in the fifth chapther is a straightforward file reading exerc
 Following was read from the file: Proin enim leo, tincidunt eget, sollicitudin a, aliquam sit amet, nisl. Proin dapibus tortor eu lectus. Curabitur in risus nec arcu pretium aliquam. In hac habitasse platea dictumst. Integer sit amet lacus sit amet pede blandit mattis. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Ut odio. Nullam nisl sem, adipiscing id, auctor eu, pulvinar et, nulla. Aenean convallis erat. Aliquam iaculis mauris sed sem.
 
 Fusce ultricies urna sed orci. Suspendisse accumsan ipsum egestas est. Pellentesque nisl. Quisque sodales ligula quis mi. In pede sapien, molestie vel, aliquet sit amet, malesuada a, magna. Nulla ipsum. 
+```
+
+## ex_5_2
+
+Unsurprisingly, the second exercise in this chapter discusses the task of writing to a file. Create a program which prompts the user for a file name "Give a file name: " and then for an input "Write something: ". After this, the program writes the string given by the user to the file and reports "Wrote (input) to the file (name).". When working correctly, the program prints something like this:
+
+```
+Give a file name: log.txt
+Write something: Attencion, attencion. 10, 10, 22, 33, Adios.
+Wrote Attencion, attencion. 10, 10, 22, 33, Adios. to the file log.txt.
 ```
 
 ## ex_6_1
@@ -258,3 +284,16 @@ Heads!
 Tails!
 Heads!
 ```
+
+## ex_8_1
+The first exercise in this chapter discusses the most common problem with programs in Python: getting a numeric value as input without a problem or constant fear of TypeError. Simply put, create a program, which asks the user for input and tries to convert it to an integer value. If the conversion happens without problems, the program prints "The input was suitable!". If the user gives something which does not convert, like letters or special characters, the program avoids the error with an exception handler and prints "The input was malformed.". When working correctly, the program prints out the following:
+
+```
+```
+
+or alternatively
+
+```
+```
+
+Probably the best way of implementing this exercise is to use the generic error class Exception, as there are some special cases where the interpreter actually raises something else than TypeError, like ValueError or NameError. Also keep in mind, that there can be an else-segement in the exception handler.
