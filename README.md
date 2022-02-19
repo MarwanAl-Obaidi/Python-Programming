@@ -232,6 +232,45 @@ The sum was: 10
 
 Keep in mind, that with the for in range-approach, there is always a variable which knows the current round number. Also, in this exercise it is allowed to assume that the user does not give faulty inputs such as letters or empty lines.
 
+## ex_4_4
+The last exercise in this chapter continues with the exercise from the last chapter, the calculator. In this exercise, expand the existing code by implementing the following new features: (A) Calculator does not automatically quit when the result is given, allowing user to do new calculations. The user has to select "6" in the menu to exit the program. (B) The calculator shows the selected numbers in the main menu by printing "Current numbers:" and the user-given input. By selecting "5" in the calculator menu, the user can change the given numbers. When implemented correctly, the program prints out following:
+
+```
+Calculator
+Give the first number: 100
+Give the second number: 25
+(1) +
+(2) -
+(3) *
+(4) /
+(5) Change numbers
+(6) Quit
+Current numbers: 100 25
+Please select something (1-6): 5
+Give the first number: 10
+Give the second number: 30
+
+(1) +
+(2) -
+(3) *
+(4) /
+(5) Change numbers
+(6) Quit
+Current numbers: 10 30
+Please select something (1-6): 1
+The result is: 40
+
+(1) +
+(2) -
+(3) *
+(4) /
+(5) Change numbers
+(6) Quit
+Current numbers: 10 30
+Please select something (1-6): 6
+Thank you!
+```
+
 ## ex_5_1
 The first exercise in the fifth chapther is a straightforward file reading exercise. There is a file in the same directory with the exercise source code called "facts.txt", which has a long strip of text. Create a program which reads the entire content of the file and prints it on the screen with the text "Following was read from the file:". When working correctly, the program prints something like this:
 
