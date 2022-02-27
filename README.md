@@ -8,6 +8,9 @@ A course I did that takes a look into the fundamentals of Python 3 programming, 
 - Conditional structure if-elif-else
 - Iteration and Iterative structures
 - External files in Python
+- Functions and subfunctions
+- Modules
+- Catching Exceptions
 
 ## ex_1_1
 Make a program which prints the following text:
@@ -281,13 +284,84 @@ Fusce ultricies urna sed orci. Suspendisse accumsan ipsum egestas est. Pellentes
 ```
 
 ## ex_5_2
-
 Unsurprisingly, the second exercise in this chapter discusses the task of writing to a file. Create a program which prompts the user for a file name "Give a file name: " and then for an input "Write something: ". After this, the program writes the string given by the user to the file and reports "Wrote (input) to the file (name).". When working correctly, the program prints something like this:
 
 ```
 Give a file name: log.txt
 Write something: Attencion, attencion. 10, 10, 22, 33, Adios.
 Wrote Attencion, attencion. 10, 10, 22, 33, Adios. to the file log.txt.
+```
+
+## ex_5_3
+In the third program, we take a look into the classification of file contents. In the same directory with the source code is a file "strings.txt", which has random strings in several lines. The lines can be divided into two groups: those which only have letters (a-z, A-Z) and numbers (0-9), and those which also have random special characters (?,&,@, $ ...).
+
+Create a program which reads all of the lines from the file and tests the lines. If the line has only letters and/or numbers, the program prints "(line) was ok.". If the line has special characters, the program should print "(line) was invalid.". When the program works, it prints out something like this:
+
+```
+5345m345ö34l was ok.
+no2no123non4 was ok.
+noq234n5ioqw#% was invalid.
+%#""SGMSGSER was invalid.
+doghdp5234 was ok.
+sg,dermoepm was invalid.
+43453-frgsd was invalid.
+hsth())) was invalid.
+bmepm35wae was ok.
+vmopaem2234+0+ was invalid.
+gsdm12313 was ok.
+bbrbwb55be3"?"#? was invalid.
+"?"#%#"!%#"&"?%%"?#?#"?" was invalid.
+retrte#%#?% was invalid.
+abcdefghijklmnopqrstuvxy was ok.
+```
+
+## ex_5_4
+The last exercise in this chapter is the first part of the second multi-part assignment of this course, the notebook. In this notebook the user is able to add, read and delete notes from a separate note file "notebook.txt".
+
+Create a program which allows the user to
+(1) Read the contents of the notebook
+(2) Add notes to the file or
+(3) Delete all of the notes.
+If the user selects 1, the entire notebook file is printed to the screen, if 2 then the program prompts "Write a new note: ", and adds the written note as the last line into the file with a trailing line break "\n". If the player selects 3, the file is emptied and the message "Notes deleted" will be shown. Also add the option (4) Quit, which ends the program, printing "Notebook shutting down, thank you.". With other selections the program prompts "Incorrect selection". When working, the program prints following:
+
+```
+(1) Read the notebook
+(2) Add note
+(3) Empty the notebook
+(4) Quit
+
+Please select one: 2
+Write a new note: Buy new tires
+(1) Read the notebook
+(2) Add note
+(3) Empty the notebook
+(4) Quit
+
+Please select one: 2
+Write a new note: Buy new headlights
+(1) Read the notebook
+(2) Add note
+(3) Empty the notebook
+(4) Quit
+
+Please select one: 1
+Buy new tires
+Buy new headlights
+
+(1) Read the notebook
+(2) Add note
+(3) Empty the notebook
+(4) Quit
+
+Please select one: 3
+Notes deleted.
+(1) Read the notebook
+(2) Add note
+(3) Empty the notebook
+(4) Quit
+
+Please select one: 4
+Notebook shutting down, thank you.
 ```
 
 ## ex_6_1
