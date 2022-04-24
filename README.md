@@ -380,6 +380,47 @@ if __name__ == "__main__":
     main()
 ```
 
+## ex_6_2
+In the second exercise the idea is to try out parameters between functions. Create a program which has the main function and a subfunction "poweroftwo". The main function prompts the user for a number "Give a number: " and then this number is sent to the subfunction as a parameter. The subfunction calculates the n:th power of 2 of the number (if given 3, 2*2*2; if 5, 2*2*2*2*2 and so on, 2**(number)) and prints it out with the message "The result was (result)". When working correctly, the program prints: 
+
+```
+Give a number: 5
+The result is 32
+```
+
+Or possibly
+
+```
+Give a number: 8
+The result is 256
+```
+
+Also remember to add this main function call to the main level:
+
+```
+if __name__ == "__main__":
+    main()
+```
+
+## ex_6_3
+The third exercise tests out the default values of parameters. Create a program which has a main function and a subfunction called tester. The main function prompts user for an input "Write something (quit ends): " and sends this input to the subfunction as a parameter.
+
+Define the subfunction tester so that it has one parameter called "givenstring", which has the default value "Too short". If the user input is less than 10 characters, the program uses the default value and if 10 or more, it prints the usergiven input. If the user inputs "quit", the program is terminated. When working correctly, the program will print out something like this:
+
+```
+Write something (quit ends): what?
+Too short
+Write something (quit ends): What do you mean?
+What do you mean?
+Write something (quit ends): Ok thats it
+Ok thats it
+Write something (quit ends): I am out of here
+I am out of here
+Write something (quit ends): quit
+```
+
+The easiest way of testing the length of a string is by using the function len().
+
 ## ex_7_1
 The first exercise in this chapter consists of simple module library operations. In the chapter, a module called random was introduced. This module consists of several functions which can be used to get random numbers. The idea here is to create a program, which simulates coin flips by randomly selecting 0 (Tails) or 1 (Heads) and printing out the result. When working correctly, the program prints out something like this:
 
