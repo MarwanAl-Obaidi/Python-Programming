@@ -421,6 +421,24 @@ Write something (quit ends): quit
 
 The easiest way of testing the length of a string is by using the function len().
 
+## ex_6_4
+The last exercise in this chapter extends the previous exercise, but it is also possible to make it completely independently. Modify the function tester so that, besides testing if the length of the given string is more than ten characters, it also tests if there is the character "X" (capital X) in the given string. If the string is longer than 10 characters and it has X in it, the tester subfunction returns a value True to the main function, otherwise False.
+
+If the subfunction returns True to the main function, the program prints "X spotted!". As earlier, if the user inputs "quit", the program terminates. When working correctly, the program prints something like this:
+
+```
+Write something (quit ends): Hello
+Too short
+Write something (quit ends): Ok a bit longer then?
+Ok a bit longer then?
+Write something (quit ends): Is Xavier here?
+Is Xavier here?
+X spotted!
+Write something (quit ends): OMG
+Too short
+Write something (quit ends): quit
+```
+
 ## ex_7_1
 The first exercise in this chapter consists of simple module library operations. In the chapter, a module called random was introduced. This module consists of several functions which can be used to get random numbers. The idea here is to create a program, which simulates coin flips by randomly selecting 0 (Tails) or 1 (Heads) and printing out the result. When working correctly, the program prints out something like this:
 
