@@ -457,6 +457,38 @@ Tails!
 Heads!
 ```
 
+## ex_7_2
+The second exercise in this chapter continues with random selection. In this exercise the objective is to develop a game called nuke-foot-cockroach, which is pretty similar to the more popular variant, paper-rock-scissors. The rules are simple: both players select either nuke, foot or cockroach, and the winner is determined in the following way: Foot beats cockroach, nuke beats foot and cockroach beats nuke. If both the player and the AI select the same, it's a tie, except if both choose nuke, then both lose.
+
+Implement the game so that the other player is computer controlled, and chooses randomly either foot(number 1), cockroach(number 3) or nuke(number 2). Also implement a feature which keeps the score, calculating both rounds the player won, and ties. If the player wins, print "You WIN!", if they loose "You LOSE!". If the round was a tie, either "It is a tie!" or "Both LOSE!", depending on if the tie was caused by a nuke or not. If the player selects "quit", the game ends and the final score is given. When the game works correctly, it prints the following:
+
+```
+Foot, Nuke or Cockroach? (Quit ends): Nuke
+You chose: Nuke
+Computer chose: Foot
+You WIN!
+Foot, Nuke or Cockroach? (Quit ends): Nuke
+You chose: Nuke
+Computer chose: Nuke
+Both LOSE!
+Foot, Nuke or Cockroach? (Quit ends): Cockroach
+You chose: Cockroach
+Computer chose: Nuke
+You WIN!
+Foot, Nuke or Cockroach? (Quit ends): Foot
+You chose: Foot
+Computer chose: Nuke
+You LOSE!
+Foot, Nuke or Cockroach? (Quit ends): Spaceshuttle
+Incorrect selection.
+Foot, Nuke or Cockroach? (Quit ends): Foot
+You chose: Foot
+Computer chose: Nuke
+You LOSE!
+Foot, Nuke or Cockroach? (Quit ends): Quit
+You played 5 rounds, and won 2 rounds, playing tie in 0 rounds.
+```
+
 ## ex_8_1
 The first exercise in this chapter discusses the most common problem with programs in Python: getting a numeric value as input without a problem or constant fear of TypeError. Simply put, create a program, which asks the user for input and tries to convert it to an integer value. If the conversion happens without problems, the program prints "The input was suitable!". If the user gives something which does not convert, like letters or special characters, the program avoids the error with an exception handler and prints "The input was malformed.". When working correctly, the program prints out the following:
 
