@@ -489,6 +489,56 @@ Foot, Nuke or Cockroach? (Quit ends): Quit
 You played 5 rounds, and won 2 rounds, playing tie in 0 rounds.
 ```
 
+## ex_7_3
+The third exercise of this chapter goes back from game programming to a more serious line, and discusses the creation of self-made modules. Unlike other exercises, in this exercise the idea is not to create a full program, but only to write a module for existing software.
+
+In the exercise, we already have the main program in the module, which is as follows:
+
+```
+# -*- coding: cp1252 -*-
+
+import mymodule
+
+mymodule.printme("Exampleline")
+```
+
+The objective is to implement this mymodule-module applied in the exercise. Create a module, which has a function printme, which prints the given parameter with the disclaimer "I got:" and after that, "The parameter was "length" characters long." When the module is implemented correctly, the program prints out the following:
+
+```
+I got: Exampleline
+The parameter was 11 characters long.
+```
+
+## ex_7_4
+The fourth exercise in this module elaborates on the idea applied in the last exercise. In the exercise the idea is once again to create a module for an existing main program. The module tests the feasibility of different user-given inputs for a password. The existing code which uses the module is as follows:
+
+```
+# -*- coding: cp1252 -*-
+
+import inspector
+while True:
+    userinput = input("Give a string for testing: ")
+    tulos = inspector.testme(userinput)
+    if tulos == True:
+        print("This string fits for a password!")
+        break
+    else:
+        print("The module says no.")
+```
+
+The idea is to create the module inspector and the function testme which receives the user-given candidate for a password. If the given input is shorter than 6 characters, contains only letters or only numbers, the module should reject the candidate and return False. If the input is longer than 6 characters and has both numbers and letters, it should be accepted. In this case the module should return True. When the program works correctly, it prints the following:
+
+```
+Give a string for testing: Test
+The module says no.
+Give a string for testing: 234234
+The module says no.
+Give a string for testing: Youhavetobekiddingme1234
+This string fits for a password!
+```
+
+The program does not have to be able to distinguish normal numbers and letters (a-z, A-Z) from special characters (#,?,%, $ etc.), but only ensure that the tested string is at least 5 long. Also, it may be worthwhile to check out the different types of string operators from the Chapter 2.
+
 ## ex_8_1
 The first exercise in this chapter discusses the most common problem with programs in Python: getting a numeric value as input without a problem or constant fear of TypeError. Simply put, create a program, which asks the user for input and tries to convert it to an integer value. If the conversion happens without problems, the program prints "The input was suitable!". If the user gives something which does not convert, like letters or special characters, the program avoids the error with an exception handler and prints "The input was malformed.". When working correctly, the program prints out the following:
 
